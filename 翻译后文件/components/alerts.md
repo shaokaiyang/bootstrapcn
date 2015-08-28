@@ -1,19 +1,20 @@
----
-layout: docs
-title: Alerts
-group: components
----
+<table>
+<tbody>
+<tr><td><em>类别</em></td><td><em>标题</em></td><td><em>群组</em></td></tr>
+<tr><td>说明文档</td><td>警报</td><td>组件</td></tr>
+</tbody>
+</table>
 
-Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
+为一些用户的典型操作中出现的可用的和灵活的警报消息提供上下文相关的反馈信息。
 
-## Contents
+## 内容
 
-* Will be replaced with the ToC, excluding the "Contents" header
+* 将被替换为 ToC,不包括标题“内容”  
 {:toc}
 
-## Examples
+## 示例
 
-Alerts are available for any length of text, as well as an optional dismiss button. For proper styling, use one of the four **required** contextual classes (e.g., `.alert-success`). For inline dismissal, use the [alerts jQuery plugin](#dismissing).
+警报可供任何长度的文本以及可选的撤回按钮使用。为了适当的格式，使用上下文类中四个**required**之一(例如，'.alert-success ')。对于内联撤回，使用 [alerts jQuery plugin](#dismissing)。
 
 {% example html %}
 <div class="alert alert-success" role="alert">
@@ -30,9 +31,9 @@ Alerts are available for any length of text, as well as an optional dismiss butt
 </div>
 {% endexample %}
 
-### Link color
+### 链接颜色
 
-Use the `.alert-link` utility class to quickly provide matching colored links within any alert.
+在任何警报信息之中，使用 `.alert-link` 实用程序类来快速匹配链接的颜色。
 
 {% example html %}
 <div class="alert alert-success" role="alert">
@@ -49,16 +50,16 @@ Use the `.alert-link` utility class to quickly provide matching colored links wi
 </div>
 {% endexample %}
 
-### Dismissing
+### 撤回
 
-Using the alert JavaScript plugin, it's possible to dismiss any alert inline. Here's how:
+使用警报的 JavaScript 插件，就有可能撤回任何内联警报。这里就是操作步骤：
 
-- Be sure you've loaded the alert plugin, or the compiled Bootstrap JavaScript.
-- Add a dismiss button and the `.alert-dismissible` class, which adds extra padding to the right of the alert and positions the `.close` button.
-- On the dismiss button, add the `data-dismiss="alert"` attribute, which triggers the JavaScript functionality. Be sure to use the `<button>` element with it for proper behavior across all devices.
-- To animate alerts when dismissing them, be sure to add the `.fade` and `.in` classes.
+-确保你已经加载警报插件或已编译的引导 JavaScript。
+-添加撤回按钮和 `.alert-dismissible` 类，该类添加额外填充右侧的警报，并置于  `.close`  按钮。
+-在撤回按钮上，添加 `data-dismiss="alert"` 属性，触发 JavaScript 功能。一定要在所有设备上用适当的方式使用 `<button>` 元素。
+-当撤回他们时，进行动画警报，一定要添加的 `.fade` 和 `.in` 类。
 
-You can see this in action with a live demo:
+你可以看到这些在现场操作演示中：
 
 {% example html %}
 <div class="alert alert-warning alert-dismissible fade in" role="alert">
@@ -70,17 +71,17 @@ You can see this in action with a live demo:
 </div>
 {% endexample %}
 
-## JavaScript behavior
+## JavaScript 行为
 
-### Triggers
+### 触发器
 
-Enable dismissal of an alert via JavaScript:
+通过 JavaScript 来撤回一个警告：
 
 {% highlight js %}
 $(".alert").alert()
 {% endhighlight %}
 
-Or with `data` attributes on a button **within the alert**, as demonstrated above:
+或用 `data` 按钮上的属性 **within the alert**, 如上所述：
 
 {% highlight html %}
 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -89,25 +90,24 @@ Or with `data` attributes on a button **within the alert**, as demonstrated abov
 </button>
 {% endhighlight %}
 
-Note that closing an alert will remove it from the DOM.
+请注意，关闭警报将会从 DOM 中移除。
 
-### Methods
-
-| Method | Description |
+### 方法
+| 方法 | 描述 |
 | --- | --- |
-| `$().alert()` | Makes an alert listen for click events on descendant elements which have the `data-dismiss="alert"` attribute. (Not necessary when using the data-api's auto-initialization.) |
-| `$().alert('close')` | Closes an alert by removing it from the DOM. If the `.fade` and `.in` classes are present on the element, the alert will fade out before it is removed. |
+| `$().alert()` | 设置一个单击事件警报用于对含有 `data-dismiss="alert"` 属性的子代元素的侦听，(不需要使用数据 data-api's 自动初始化时)。|
+| `$().alert('close')` | 关闭警报通过从 DOM 中移除它，如果 `.fade` 和 `.in` 类在元素上有所体现，警报将会淡出在它被移除之前。 |
 
 {% highlight js %}$(".alert").alert('close'){% endhighlight %}
 
-### Events
+### 事件
 
-Bootstrap's alert plugin exposes a few events for hooking into alert functionality.
+当连接警报功能时，引导的警报插件会暴露一些事件。
 
-| Event | Description |
+| 事件 | 描述 |
 | --- | --- |
-| `close.bs.alert` | This event fires immediately when the <code>close</code> instance method is called. |
-| `closed.bs.alert` | This event is fired when the alert has been closed (will wait for CSS transitions to complete). |
+| `close.bs.alert` | 当 <code>close</code> 中的实例方法被调用，这个事件立即被触发。 |
+| `closed.bs.alert` | 当警报已经被关闭，这个事件立即被触发 (将会等待 CSS 转换完成). |
 
 {% highlight js %}
 $('#myAlert').on('closed.bs.alert', function () {
