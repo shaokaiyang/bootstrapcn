@@ -1,23 +1,22 @@
 ---
-layout: docs
-title: Cards
-group: components
+布局: 文档
+标题: 卡片
+组: 组件
 ---
 
-A **card** is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options.
+一个 **卡片** 是一个灵活易变并且可以扩展的内容容器。它包含了头部和底部的可选项，一个大范围的内容，内容背景颜色和强大的显示选项。
 
-If you're familiar with Bootstrap 3, cards replace our old panels, wells, and thumbnails. Similar functionality to those components is available as modifier classes for cards.
+如果你对 Bootstrap 3 熟悉，卡片替换了我们老的 panels，wells，和 thumbnails。达到这些组件类似的功能可以通过修改卡片的类来实现。
 
-## Contents
+## 内容 
 
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
+* 它将会被 ToC 替代，除“内容”头部之外。
 
-## Example
+## 例子
 
-Cards require a small amount of markup and classes to provide you with as much control as possible. These classes and markup are flexible though and can typically be remixed and extended with ease. For example, if your card has no flush content like images, feel free to put the `.card-block` class on the `.card` element to consolidate your markup.
+卡片需要少量代价和类来给尽可能多的控件使用。但是这些代价和类是灵活可变通的，并且可以轻松的重新混合和扩展。比如，如果你的卡片没有流内容，比如像图片，那么就可以简单的在有 `.card` 类的元素上加上 `.card-block` 这个类来固定你的成本。
 
-{% example html %}
+{% 例子开始 %}
 <div class="card">
   <img class="card-img-top" data-src="holder.js/100%x180/" alt="Card image cap">
   <div class="card-block">
@@ -26,13 +25,13 @@ Cards require a small amount of markup and classes to provide you with as much c
     <a href="#" class="btn btn-primary">Button</a>
   </div>
 </div>
-{% endexample %}
+{% 结束例子 %}
 
-## Content types
+## 内容种类
 
-Cards support a wide variety of content, including images, text, list groups, links, and more. Mix and match multiple content types to create the card you need.
+卡片支持很多类型的内容，包括图片，文本，组列表，链接等。混合和匹配多种类型的内容来创建你需要的卡片。
 
-{% example html %}
+{% 例子 html %}
 <div class="card">
   <img class="card-img-top" data-src="holder.js/100%x180/?text=Image cap" alt="Card image cap">
   <div class="card-block">
@@ -49,27 +48,27 @@ Cards support a wide variety of content, including images, text, list groups, li
     <a href="#" class="card-link">Another link</a>
   </div>
 </div>
-{% endexample %}
+{% 例子结束 %}
 
-{% example html %}
+{% 例子 html %}
 <div class="card">
   <img class="card-img-top" data-src="holder.js/100%x180/?text=Image cap" alt="Card image cap">
   <div class="card-block">
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
 </div>
-{% endexample %}
+{% 例子结束 %}
 
-{% example html %}
+{% 例子 html %}
 <div class="card card-block">
   <h4 class="card-title">Card title</h4>
   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   <a href="#" class="card-link">Card link</a>
   <a href="#" class="card-link">Another link</a>
 </div>
-{% endexample %}
+{% 例子结束 %}
 
-{% example html %}
+{% 例子 html %}
 <div class="card">
   <div class="card-block">
     <h4 class="card-title">Card title</h4>
@@ -82,15 +81,15 @@ Cards support a wide variety of content, including images, text, list groups, li
     <a href="#" class="card-link">Another link</a>
   </div>
 </div>
-{% endexample %}
+{% 例子结束 %}
 
-## Sizing
+## 大小
 
-Constrain the width of cards via custom CSS, our predefined grid classes, or with custom styles using our grid mixins.
+通过使用自定义 CSS 来限制卡片的宽度，我们之前定义好的网格类，或者使用我们的混合网格自定义样式。
 
-Using the grid:
+使用网格:
 
-{% example html %}
+{% 例子 html %}
 <div class="row">
   <div class="col-sm-6">
     <div class="card card-block">
@@ -107,23 +106,23 @@ Using the grid:
     </div>
   </div>
 </div>
-{% endexample %}
+{% 例子结束 %}
 
-Using custom widths:
+使用自定义宽度:
 
-{% example html %}
+{% 例子 html %}
 <div class="card card-block" style="width: 20rem;">
   <h3 class="card-title">Special title treatment</h3>
   <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
   <a href="#" class="btn btn-primary">Go somewhere</a>
 </div>
-{% endexample %}
+{% 例子结束 %}
 
-## Text alignment
+## 文本对齐
 
-You can quickly change the text alignment of any card—in its entirety or specific parts—with our [text align classes]({{ site.baseurl }}/components/utilities/#text-alignment).
+你可以在任何卡片快速的改变文本文本对齐方式－在它的全部或者部分区域－使用我们的 [文本对齐类]({{ site.baseurl }}/components/utilities/#text-alignment).
 
-{% example html %}
+{% 例子 html %}
 <div class="card card-block">
   <h4 class="card-title">Special title treatment</h4>
   <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -141,13 +140,13 @@ You can quickly change the text alignment of any card—in its entirety or speci
   <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
   <a href="#" class="btn btn-primary">Go somewhere</a>
 </div>
-{% endexample %}
+{% 例子结束 %}
 
-## Header and footer
+## 头部和底部
 
-Add an optional header and/or footer within a card.
+在一个卡片里面新增一个可选的头部或者底部。
 
-{% example html %}
+{% 例子 html %}
 <div class="card">
   <div class="card-header">
     Featured
@@ -158,9 +157,9 @@ Add an optional header and/or footer within a card.
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
-{% endexample %}
+{% 例子结束 %}
 
-{% example html %}
+{% 例子 html %}
 <div class="card">
   <div class="card-header">
     Quote
@@ -172,9 +171,9 @@ Add an optional header and/or footer within a card.
     </blockquote>
   </div>
 </div>
-{% endexample %}
+{% 例子结束 %}
 
-{% example html %}
+{% 例子 html %}
 <div class="card text-center">
   <div class="card-header">
     Featured
@@ -188,13 +187,13 @@ Add an optional header and/or footer within a card.
     2 days ago
   </div>
 </div>
-{% endexample %}
+{% 例子结束 %}
 
-## Image caps
+## 图片盖子
 
-Similar to headers and footers, cards include top and bottom image caps.
+与头部和底部类似，卡片包括了顶部和底部的图片盖子。
 
-{% example html %}
+{% 例子 html %}
 <div class="card">
   <img class="card-img-top" data-src="holder.js/100%x180/" alt="Card image cap">
   <div class="card-block">
@@ -211,13 +210,13 @@ Similar to headers and footers, cards include top and bottom image caps.
   </div>
   <img class="card-img-bottom" data-src="holder.js/100%x180/" alt="Card image cap">
 </div>
-{% endexample %}
+{% 例子结束 %}
 
-## Image overlays
+## 图片覆盖
 
-Turn an image into a card background and overlay your card's text. Depending on the image, you may or may not need `.card-inverse` (see below).
+将一张图片变成一个卡片的背景并且覆盖在卡片的文本上。根据这张图片，你可能或者不需要使用 `.card-inverse` 这个类（看下面的例子）。
 
-{% example html %}
+{% 例子 html %}
 <div class="card card-inverse">
   <img class="card-img" data-src="holder.js/100%x270/#55595c:#373a3c/text:Card image" alt="Card image">
   <div class="card-img-overlay">
@@ -226,15 +225,15 @@ Turn an image into a card background and overlay your card's text. Depending on 
     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
   </div>
 </div>
-{% endexample %}
+{% 例子结束 %}
 
-## Inverted text
+## 翻转的文本
 
-Cards include a class for quickly toggling **the text color**. By default, cards use dark text and assume a light background. **Add `.card-inverse` for white text** and specify the `background-color` and `border-color` to go with it.
+卡片包括了一个快速开关 **文本颜色** 的类。默认情况下，卡片使用黑色文本和浅颜色的背景。 **给白色文字增加 `.card-inverse` 这个类** 并且明确 `background-color` 和 `border-color` 这两个类。
 
-You can also use `.card-inverse` with the [contextual backgrounds variants](#background-variants).
+你也可以使用 `.card-inverse` 这个类和 [上下文背景变量](#background-variants).
 
-{% example html %}
+{% 例子 html %}
 <div class="card card-inverse" style="background-color: #333; border-color: #333;">
   <div class="card-block">
     <h3 class="card-title">Special title treatment</h3>
@@ -242,13 +241,13 @@ You can also use `.card-inverse` with the [contextual backgrounds variants](#bac
     <a href="#" class="btn btn-primary">Button</a>
   </div>
 </div>
-{% endexample %}
+{% 例子结束 %}
 
-## Background variants
+## 背景变量
 
-Cards include their own variant classes for quickly changing the `background-color` and `border-color` of a card. **Darker colors require the use of `.card-inverse`.**
+卡片包含了它们自己的快速改变 `background-color` 和 `border-color` 的变量类。**更深颜色的字体需要使用 `.card-inverse`.**
 
-{% example html %}
+{% 例子 html %}
 <div class="card card-inverse card-primary text-center">
   <div class="card-block">
     <blockquote class="card-blockquote">
@@ -289,13 +288,13 @@ Cards include their own variant classes for quickly changing the `background-col
     </blockquote>
   </div>
 </div>
-{% endexample %}
+{% 例子结束 %}
 
-## Groups
+## 组
 
-Use card groups to render cards as a single, attached element with equal width and height columns. By default, card groups use `display: table;` and `table-layout: fixed;` to achieve their uniform sizing. However, enabling [flexbox mode]({{ site.baseurl }}/getting-started/flexbox) can switch that to use `display: flex;` and provide the same effect.
+使用卡片组来让卡片成为单一的有着固定宽度和高度的列的元素。默认情况下，卡片组使用`display: table;` 和 `table-layout: fixed;` 来达到统一的大小。然而通过允许[flexbox 模式]({{ site.baseurl }}/getting-started/flexbox) 并使用 `display: flex;` 可以达到一样的效果。
 
-{% example html %}
+{% 例子 html %}
 <div class="card-group">
   <div class="card">
     <img class="card-img-top" data-src="holder.js/100%x180/" alt="Card image cap">
@@ -322,15 +321,15 @@ Use card groups to render cards as a single, attached element with equal width a
     </div>
   </div>
 </div>
-{% endexample %}
+{% 例子结束 %}
 
-## Decks
+## 甲板
 
-Need a set of equal width and height cards that aren't attached to one another? Use card decks. By default, card decks require two wrapping elements: `.card-deck-wrapper` and a `.card-deck`. We use table styles for the sizing and the gutters on `.card-deck`. The `.card-deck-wrapper` is used to negative margin out the `border-spacing` on the `.card-deck`.
+需要使用一个有着相同宽度和高度的并且没有与其他相关联的卡片吗？使用卡片板。默认情况下，卡片板需要两个包裹的元素：`.card-deck-wrapper` 和一个 `.card-deck`。我们在 `.card-deck` 上给大小和凹槽使用表格样式。这个 `.card-deck-wrapper` 是为了在`.card-deck` 上消除 `border-spacing` 的边距。
 
-**ProTip!** If you enable [flexbox mode]({{ site.baseurl }}/getting-started/flexbox/), you can remove the `.card-deck-wrapper`.
+**编程建议!** 如果你允许 [flexbox 模式]({{ site.baseurl }}/getting-started/flexbox/), 你可以删除 `.card-deck-wrapper`这个类。
 
-{% example html %}
+{% 例子 html %}
 <div class="card-deck-wrapper">
   <div class="card-deck">
     <div class="card">
@@ -359,15 +358,15 @@ Need a set of equal width and height cards that aren't attached to one another? 
     </div>
   </div>
 </div>
-{% endexample %}
+{% 例子结束 %}
 
-## Columns
+## 列
 
-Cards can be organized into [Masonry](http://masonry.desandro.com)-like columns with just CSS by wrapping them in `.card-columns`.
+卡片可以被组织成 [Masonry](http://masonry.desandro.com)－就像通过用 CSS 将列包裹在 `.card-columns`里面。
 
-**Heads up!** This is **not available in IE9 and below** as they have no support for the [`column-*` CSS properties](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Using_multi-column_layouts).
+**注意!** 这个 **不在 IE9 和更低版本情况下使用** 因为它们不支持 [`column-*` CSS properties](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Using_multi-column_layouts).
 
-{% example html %}
+{% 例子 html %}
 <div class="card-columns">
   <div class="card">
     <img class="card-img-top" data-src="holder.js/100%x160/" alt="Card image cap">
@@ -428,4 +427,4 @@ Cards can be organized into [Masonry](http://masonry.desandro.com)-like columns 
     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
   </div>
 </div>
-{% endexample %}
+{% 例子结束 %}
