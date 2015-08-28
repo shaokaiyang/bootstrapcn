@@ -1,353 +1,128 @@
----
-layout: docs
-title: Navs
-group: components
----
+|布局|标题|组|
+| ------------- |:-------------:| -----:|
+|docs|导航栏|组件|
 
-Navigation available in Bootstrap share general markup and styles, from the base `.nav` class to the active and disabled states. Swap modifier classes to switch between each style.
+导航栏是对将产品商标，导航和其他元素简单放置到一个简洁导航表头的简单包装。它很容易扩展，并且在崩溃插件的帮助下，它可以轻松地集成屏幕外的内容。
 
-## Contents
+# 目录
 
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
+- 将被 ToC 取代，“Contents” header {:toc} 除外。
 
-## Regarding accessibility
+# 基础知识
 
-If you are using navs to provide a navigation bar, be sure to add a `role="navigation"` to the most logical parent container of the `<ul>`, or wrap a `<nav>` element around the whole navigation. Do not add the role to the `<ul>` itself, as this would prevent it from being announced as an actual list by assistive technologies.
+在开始使用导航栏之前，您需要知道以下几点：
 
-## Base nav
+- 导航栏需要一个封装的 `.navbar` 和一个配色方案的类（`.navbar-default` 或 `.navbar-inverse`）
+- 在导航栏中使用多个组件时，您需要一些[对齐方式类](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/navbar.md#alignment)
+- 导航栏和他们的内容默认为流动的。使用[可选的容器](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/navbar.md#containers)来限制他们的水平宽度
+- 使用 `.pull-left` 和 `.pull-right` 来快速地对齐子组件
+- 通过使用一个 `<nav>` 元素或者，如果使用一个更一般的元素比如 `<div>`,添加一个 `role="navigation"` 到每个导航栏来显示地标识它为用户辅助技术的标志区域
 
-Roll your own navigation style by extending the base `.nav` component. All Bootstrap's nav components are built on top of this. Includes styles for the disabled state, but **not the active state**.
+# 支持的内容
 
-{% example html %}
-<ul class="nav">
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Another link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled" href="#">Disabled</a>
-  </li>
-</ul>
-{% endexample %}
+导航栏伴随对少数子组件的内置支持而来。根据您的需要从以下几点组合和搭配：
 
-Classes are used throughout, so your markup can be super flexible. Use `<ul>`s like above, or roll your own with say a `<nav>` element.
+- `.navbar-brand` 为您的公司，产品或项目名称提供支持
+- `.navbar-nav` 为一个全高度，轻量级的导航（包括对下拉菜单的支持）提供支持
+- `.navbar-form` 为垂直居中，默认大小的输入框和按钮提供支持
+- `.navbar-toggler` 为使用我们的崩溃插件和其他导航切换行为提供支持
 
-{% example html %}
-<nav class="nav">
-  <a class="nav-link active" href="#">Active</a>
-  <a class="nav-link" href="#">Link</a>
-  <a class="nav-link" href="#">Another link</a>
-  <a class="nav-link disabled" href="#">Disabled</a>
-</nav>
-{% endexample %}
+下面是一个示例，所有的子组件包括在一个默认的，轻量的导航栏中：
 
-## Tabs
+{% example html %} 
 
-Takes the basic nav from above and adds the `.nav-tabs` class to generate a tabbed interface. Use them to create tabbable regions with our [tab JavaScript plugin](#javascript-behavior).
+[Navbar](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/navbar.md#)
+- [Home (current)](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/navbar.md#)
+- [Features](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/navbar.md#)
+- [Pricing](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/navbar.md#)
+- [About](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/navbar.md#)
 
-{% example html %}
-<ul class="nav nav-tabs">
-  <li class="nav-item">
-    <a href="#" class="nav-link active">Active</a>
-  </li>
-  <li class="nav-item">
-    <a href="#" class="nav-link">Link</a>
-  </li>
-  <li class="nav-item">
-    <a href="#" class="nav-link">Another link</a>
-  </li>
-  <li class="nav-item disabled">
-    <a href="#" class="nav-link">Disabled</a>
-  </li>
-</ul>
-{% endexample %}
+Search {% endexample %}
 
-## Pills
+# 配色方案
 
-Take that same HTML, but use `.nav-pills` instead:
+将导航栏主题化从未如此容易，这要归功于一个简单的链接颜色修饰符类和 `background-color` 工具的结合。换句话说，您可以指定亮暗并且应用背景颜色。
 
-{% example html %}
-<ul class="nav nav-pills">
-  <li class="nav-item">
-    <a href="#" class="nav-link active">Active</a>
-  </li>
-  <li class="nav-item">
-    <a href="#" class="nav-link">Link</a>
-  </li>
-  <li class="nav-item">
-    <a href="#" class="nav-link">Another link</a>
-  </li>
-  <li class="nav-item">
-    <a href="#" class="nav-link disabled">Disabled</a>
-  </li>
-</ul>
-{% endexample %}
+下面是一些例子，来展示我们所说的内容：
 
-## Stacked pills
+[Navbar](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/navbar.md#)
+- [Home (current)](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/navbar.md#)
+- [Features](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/navbar.md#) 
+- [Pricing](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/navbar.md#)
+- [About](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/navbar.md#)
 
-Just add `.nav-stacked` to the `.nav.nav-pills`.
+Search [Navbar](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/navbar.md#)
+- [Home (current)](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/navbar.md#)
+- [Features](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/navbar.md#)
+- [Pricing](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/navbar.md#)
+- [About](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/navbar.md#) 
+
+Search [Navbar](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/navbar.md#)
+- [Home (current)](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/navbar.md#)
+- [Features](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/navbar.md#) 
+- [Pricing](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/navbar.md#)
+- [About](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/navbar.md#) 
+
+Search 
+{% highlight html %} 
+
+<!-- Navbar content --> 
+
+<!-- Navbar content --> 
+
+<!-- Navbar content --> {% endhighlight %}
+
+# 容器
+
+虽然这不是必须的，但您可以把一个导航栏封装到一个 `.container` 中来将它在一个页面居中或者添加一个仅内容居中的导航栏。
 
 {% example html %}
-<ul class="nav nav-pills nav-stacked">
-  <li class="nav-item">
-    <a href="#" class="nav-link active">Active</a>
-  </li>
-  <li class="nav-item">
-    <a href="#" class="nav-link">Link</a>
-  </li>
-  <li class="nav-item">
-    <a href="#" class="nav-link">Another link</a>
-  </li>
-  <li class="nav-item">
-    <a href="#" class="nav-link disabled">Disabled</a>
-  </li>
-</ul>
+
+[Navbar](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/navbar.md#)
+
 {% endexample %}
 
-## Using dropdowns
+{% example html %} 
 
-Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin]({{ site.baseurl }}/components/dropdowns/#usage).
+[Navbar](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/navbar.md#) 
+{% endexample %}
 
-### Tabs with dropdowns
+# 布局
+
+导航栏可以静态地放置(默认表现)，或固定到窗口的顶部或底部。
 
 {% example html %}
-<ul class="nav nav-tabs">
-  <li class="nav-item">
-    <a href="#" class="nav-link active">Active</a>
-  </li>
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </div>
-  </li>
-  <li class="nav-item">
-    <a href="#" class="nav-link">Another link</a>
-  </li>
-  <li class="nav-item">
-    <a href="#" class="nav-link disabled">Disabled</a>
-  </li>
-</ul>
-{% endexample %}
-
-### Pills with dropdowns
+ 
+[Fixed top](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/navbar.md#) {% endexample %}
 
 {% example html %}
-<ul class="nav nav-pills">
-  <li class="nav-item">
-    <a href="#" class="nav-link active">Active</a>
-  </li>
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </div>
-  </li>
-  <li class="nav-item">
-    <a href="#" class="nav-link">Another link</a>
-  </li>
-  <li class="nav-item">
-    <a href="#" class="nav-link disabled">Disabled</a>
-  </li>
-</ul>
+ 
+[Fixed bottom](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/navbar.md#) {% endexample %}
+
+# 可折叠内容
+
+我们的崩溃插件允许您使用一个 `<button>` 或 `<a>` 来切换隐藏内容。
+
+{% example html %}
+
+## 折叠的内容
+
+通过导航栏标牌切换
+
+☰ {% endexample %}
+
+对于更复杂的导航栏模式，像在 Bootstrap v3 中所使用的，使用 `.navbar-toggleable-*` 类和 `.navbar-toggler`。这些类重写我们的响应程序来展示导航，仅当内容是为了展示的时候 
+。
+
+{% example html %} 
+
+☰
+
+[Responsive navbar](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/navbar.md#)
+- [Home (current)](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/navbar.md#) 
+- [Features](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/navbar.md#)
+- [Pricing](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/navbar.md#) 
+- [About](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/navbar.md#)
+
 {% endexample %}
 
-## JavaScript behavior
-
-Use the tab JavaScript plugin—include it individually or through the compiled `bootstrap.js` file—to extend our navigational tabs and pills to create tabbable panes of local content, even via dropdown menus.
-
-<div class="bd-example bd-example-tabs" role="tabpanel">
-  <ul id="myTab" class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
-      <a class="nav-link active" href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">Profile</a>
-    </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-        Dropdown
-      </a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#dropdown1" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1">@fat</a>
-        <a class="dropdown-item" href="#dropdown2" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2">@mdo</a>
-      </div>
-    </li>
-  </ul>
-  <div id="myTabContent" class="tab-content">
-    <div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledBy="home-tab">
-      <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
-    </div>
-    <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledBy="profile-tab">
-      <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
-    </div>
-    <div role="tabpanel" class="tab-pane fade" id="dropdown1" aria-labelledBy="dropdown1-tab">
-      <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
-    </div>
-    <div role="tabpanel" class="tab-pane fade" id="dropdown2" aria-labelledBy="dropdown2-tab">
-      <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
-    </div>
-  </div>
-</div>
-
-### Using data attributes
-
-You can activate a tab or pill navigation without writing any JavaScript by simply specifying `data-toggle="tab"` or `data-toggle="pill"` on an element. Use these data attributes on `.nav-tabs` or `.nav-pills`.
-
-<div role="tabpanel">
-{% highlight html %}
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-  <li class="nav-item">
-    <a class="nav-link active" href="#home" role="tab" data-toggle="tab">Home</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#profile" role="tab" data-toggle="tab">Profile</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#messages" role="tab" data-toggle="tab">Messages</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#settings" role="tab" data-toggle="tab">Settings</a>
-  </li>
-</ul>
-
-<!-- Tab panes -->
-<div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="home">...</div>
-  <div role="tabpanel" class="tab-pane" id="profile">...</div>
-  <div role="tabpanel" class="tab-pane" id="messages">...</div>
-  <div role="tabpanel" class="tab-pane" id="settings">...</div>
-</div>
-{% endhighlight %}
-</div>
-
-### Via JavaScript
-
-Enable tabbable tabs via JavaScript (each tab needs to be activated individually):
-
-{% highlight js %}
-$('#myTab a').click(function (e) {
-  e.preventDefault()
-  $(this).tab('show')
-})
-{% endhighlight %}
-
-You can activate individual tabs in several ways:
-
-{% highlight js %}
-$('#myTab a[href="#profile"]').tab('show') // Select tab by name
-$('#myTab a:first').tab('show') // Select first tab
-$('#myTab a:last').tab('show') // Select last tab
-$('#myTab li:eq(2) a').tab('show') // Select third tab (0-indexed)
-{% endhighlight %}
-
-### Fade effect
-
-To make tabs fade in, add `.fade` to each `.tab-pane`. The first tab pane must also have `.in` to properly fade in initial content.
-
-{% highlight html %}
-<div class="tab-content">
-  <div role="tabpanel" class="tab-pane fade in active" id="home">...</div>
-  <div role="tabpanel" class="tab-pane fade" id="profile">...</div>
-  <div role="tabpanel" class="tab-pane fade" id="messages">...</div>
-  <div role="tabpanel" class="tab-pane fade" id="settings">...</div>
-</div>
-{% endhighlight %}
-
-### Methods
-
-#### $().tab
-
-Activates a tab element and content container. Tab should have either a `data-target` or an `href` targeting a container node in the DOM.
-
-{% highlight html %}
-<ul class="nav nav-tabs" role="tablist" id="myTab">
-  <li class="nav-item">
-    <a class="nav-link active" href="#home" role="tab" data-toggle="tab" aria-controls="home">Home</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#profile" role="tab" data-toggle="tab" aria-controls="profile">Profile</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#messages" role="tab" data-toggle="tab" aria-controls="messages">Messages</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#settings" role="tab" data-toggle="tab" aria-controls="settings">Settings</a>
-  </li>
-</ul>
-
-<div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="home">...</div>
-  <div role="tabpanel" class="tab-pane" id="profile">...</div>
-  <div role="tabpanel" class="tab-pane" id="messages">...</div>
-  <div role="tabpanel" class="tab-pane" id="settings">...</div>
-</div>
-
-<script>
-  $(function () {
-    $('#myTab a:last').tab('show')
-  })
-</script>
-{% endhighlight %}
-
-### Events
-
-When showing a new tab, the events fire in the following order:
-
-1. `hide.bs.tab` (on the current active tab)
-2. `show.bs.tab` (on the to-be-shown tab)
-3. `hidden.bs.tab` (on the previous active tab, the same one as for the `hide.bs.tab` event)
-4. `shown.bs.tab` (on the newly-active just-shown tab, the same one as for the `show.bs.tab` event)
-
-If no tab was already active, then the `hide.bs.tab` and `hidden.bs.tab` events will not be fired.
-
-<div class="table-responsive">
-  <table class="table table-bordered table-striped">
-    <thead>
-     <tr>
-       <th style="width: 150px;">Event Type</th>
-       <th>Description</th>
-     </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>show.bs.tab</td>
-        <td>This event fires on tab show, but before the new tab has been shown. Use <code>event.target</code> and <code>event.relatedTarget</code> to target the active tab and the previous active tab (if available) respectively.</td>
-     </tr>
-     <tr>
-        <td>shown.bs.tab</td>
-        <td>This event fires on tab show after a tab has been shown. Use <code>event.target</code> and <code>event.relatedTarget</code> to target the active tab and the previous active tab (if available) respectively.</td>
-      </tr>
-      <tr>
-        <td>hide.bs.tab</td>
-        <td>This event fires when a new tab is to be shown (and thus the previous active tab is to be hidden). Use <code>event.target</code> and <code>event.relatedTarget</code> to target the current active tab and the new soon-to-be-active tab, respectively.</td>
-      </tr>
-      <tr>
-        <td>hidden.bs.tab</td>
-        <td>This event fires after a new tab is shown (and thus the previous active tab is hidden). Use <code>event.target</code> and <code>event.relatedTarget</code> to target the previous active tab and the new active tab, respectively.</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-{% highlight js %}
-$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-  e.target // newly activated tab
-  e.relatedTarget // previous active tab
-})
-{% endhighlight %}
