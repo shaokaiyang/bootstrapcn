@@ -1,7 +1,7 @@
 
 <table>
 <tbody>
-<tr><td><em>layout</em></td><td><em>title</em></td><td><em>group</em></td></tr>
+<tr><td><em>布局</em></td><td><em>标题</em></td><td><em>分组</em></td></tr>
 <tr><td>docs</td><td>License FAQs</td><td>about</td></tr>
 </tbody>
 </table>
