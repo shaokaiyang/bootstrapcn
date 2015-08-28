@@ -1,12 +1,14 @@
----
-layout: docs
-title: Breadcrumb
-group: components
----
+<table>
+<tbody>
+<tr><td><em>类别</em></td><td><em>标题</em></td><td><em>群组</em></td></tr>
+<tr><td>说明文档</td><td>导航控件</td><td>组件</td></tr>
+</tbody>
+</table>
 
-Indicate the current page's location within a navigational hierarchy.
+在导航层次之中，指示当前页面的位置。
 
-Separators are automatically added in CSS through [`::before`](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) and [`content`](https://developer.mozilla.org/en-US/docs/Web/CSS/content).
+通过 CSS 自动添加分隔符
+[`::before`](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) 和 [`content`](https://developer.mozilla.org/en-US/docs/Web/CSS/content).
 
 {% example html %}
 <ol class="breadcrumb">
