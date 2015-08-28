@@ -31,4 +31,4 @@ Bootstrap 在 MIT 许可协议下发布，它的版权是 {{ site.time | date: "
 - 包括 Bootstrap 自身在内，或您可能对它做的任何修改，你可以组装任何重新发布的版本
 - 提交您对 Bootstrap 所做的更改到 Bootstrap 项目（尽管鼓励这种反馈）
 
-更多详细信息请参阅[项目资源库](https://github.com/bitmoonz/bootstrapcn/blob/master/about/%7B%7B%20site.repo%20%7D%7D/blob/master/LICENSE)中 Bootstrap 全面地许可信息
+更多详细信息请参阅[项目资源库](https://github.com/bitmoonz/bootstrapcn/blob/master/about/%7B%7B%20site.repo%20%7D%7D/blob/master/LICENSE)中 Bootstrap 全面地许可信息。
