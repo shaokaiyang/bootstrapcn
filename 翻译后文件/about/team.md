@@ -5,6 +5,8 @@
 </tbody>
 </table>
 
+Bootstrap 由创始团队和参与我们社区并给予巨大支持的一群宝贵的核心贡献者维护。
+
 {% for member in site.data.core-team %}  
 [{{ member.name }} @{{ member.user }}](https://github.com/%7B%7B%20member.user%20%7D%7D)    
 {% endfor %}    
