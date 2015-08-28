@@ -6,7 +6,7 @@
 
 ## Hello, world!
 
-这是一个很简单的hero  单元（hero unit），一个 jumbotron 风格的组件能将额外的注意力吸引到特定的内容或者信息上去。
+这是一个很简单的 hero 单元（hero unit），一个 jumbotron 风格的组件能将额外的注意力吸引到特定的内容或者信息上去。
 
 ----------
 
@@ -16,7 +16,7 @@
 
 {% endexample %}
 
-为了保证 jumbotron 占据全部宽度而且没有圆角，可以添加 .jumbotron-fluid 这一修饰符类，再在里面加入 .container 或者 .container-fluid。
+为了保证 jumbotron 占据全部宽度而且没有圆角，可以添加 `.jumbotron-fluid` 这一修饰符类，再在里面加入 `.container` 或者 `.container-fluid`。
 
 {% example html %}
 
@@ -25,4 +25,3 @@
 这是改良后的 jumbotron，可以占据它父类的整个水平空间。
 
 {% endexample %}
-
