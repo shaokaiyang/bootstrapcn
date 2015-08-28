@@ -1,25 +1,26 @@
----
-layout: docs
-title: Button dropdown
-group: components
----
+<table>
+<tbody>
+<tr><td><em>类别</em></td><td><em>标题</em></td><td><em>群组</em></td></tr>
+<tr><td>说明文档</td><td>按钮下拉列表</td><td>组件</td></tr>
+</tbody>
+</table>
 
-Use any button to trigger a dropdown menu by placing it within a `.btn-group` and providing the proper dropdown menu markup.
+使用任何按钮来触发一个下拉菜单，只需将它放在 `.btn-group` 中，并提供适当的下拉列表菜单标记。
 
 {% callout danger %}
-#### Plugin dependency
+#### 插件依赖项
 
-Button dropdowns require the [dropdown plugin]({{ site.baseurl }}/components/dropdowns/) to be included in your version of Bootstrap.
+按钮的下拉列表需要将 [下拉列表插件]({{ site.baseurl }}/components/dropdowns/) 包括在您的引导程序版本中。
 {% endcallout %}
 
-## Contents
+## 内容
 
-* Will be replaced with the ToC, excluding the "Contents" header
+* 将被替换为 ToC，不包含标题“内容”  
 {:toc}
 
-### Single button dropdowns
+### 单按钮下拉菜单
 
-Turn a button into a dropdown toggle with some basic markup changes.
+通过一些基本的标记变化将一个按钮变为一个下拉切换。
 
 <div class="bd-example">
   <div class="btn-group">
@@ -100,9 +101,9 @@ Turn a button into a dropdown toggle with some basic markup changes.
 </div>
 {% endhighlight %}
 
-### Split button dropdowns
+### 分割按钮下拉菜单
 
-Similarly, create split button dropdowns with the same markup changes, only with a separate button.
+相似地，用相同的标记变化来创建一个分割按钮下拉菜单，仅仅使用一个分离按钮。
 
 <div class="bd-example">
   <div class="btn-group">
@@ -202,9 +203,9 @@ Similarly, create split button dropdowns with the same markup changes, only with
 </div>
 {% endhighlight %}
 
-### Sizing
+### 调整大小
 
-Button dropdowns work with buttons of all sizes.
+按钮下拉菜单能够应用于各种规模的按钮。
 
 <div class="bd-example">
   <div class="btn-toolbar" role="toolbar">
@@ -259,9 +260,9 @@ Button dropdowns work with buttons of all sizes.
 </div>
 {% endhighlight %}
 
-### Dropup variation
+### Dropup 变化
 
-Trigger dropdown menus above elements by adding `.dropup` to the parent.
+通过将 `.dropup` 添加到父目录来触发一个元素的下拉列表菜单。
 
 <div class="bd-example">
   <div class="btn-toolbar" role="toolbar">
