@@ -1,201 +1,80 @@
----
-layout: docs
-title: Input group
-group: components
----
+通过在文本 `<input>` 的一边添加文本、按钮或者按钮组可以非常容易的扩展表单控件。
 
-Easily extend form controls by adding text, buttons, or button groups on either side of textual `<input>`s.
+## 内容
 
-## Contents
+- 它将会被 ToC 替代，除“内容”头部之外
 
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
+## 基础例子
 
-## Basic example
-
-Place one add-on or button on either side of an input. You may also place one on both sides of an input. **We do not support multiple add-ons on a single side, nor multiple form-controls in a single input group.**
+将一个扩展或者按钮放置在 input 的一边。你也同样可以放置在 input 的两边。我们不支持将多个扩展防放在一边，同样也不支持将多个表单控件放在单个输入组中。
 
 {% example html %}
-<div class="input-group">
-  <span class="input-group-addon" id="basic-addon1">@</span>
-  <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
-</div>
+
+@
 <br>
-<div class="input-group">
-  <input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
-  <span class="input-group-addon" id="basic-addon2">.00</span>
-</div>
+.00
+
+Your vanity URL
+
+https://example.com/users/
+
+## 大小
+
+将相关表单大小类添加到 `.input-group` 和里面会自动调整大小的内容----不需要在各个元素上重复相关表单大小类。
+
+{% example html %}
+
+@
 <br>
-<label for="basic-url">Your vanity URL</label>
-<div class="input-group">
-  <span class="input-group-addon" id="basic-addon3">https://example.com/users/</span>
-  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-</div>
+@
 <br>
-<div class="input-group">
-  <span class="input-group-addon">$</span>
-  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-  <span class="input-group-addon">.00</span>
-</div>
+@
 {% endexample %}
 
-## Sizing
+## 复选框和单选框插件
 
-Add the relative form sizing classes to the `.input-group` itself and contents within will automatically resize—no need for repeating the form control size classes on each element.
+将复选框或者单选框放置在一个输入组的插件而不是文本内。
 
 {% example html %}
-<div class="input-group input-group-lg">
-  <span class="input-group-addon" id="sizing-addon1">@</span>
-  <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
-</div>
-<br>
-<div class="input-group">
-  <span class="input-group-addon" id="sizing-addon2">@</span>
-  <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
-</div>
-<br>
-<div class="input-group input-group-sm">
-  <span class="input-group-addon" id="sizing-addon3">@</span>
-  <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon3">
-</div>
+
 {% endexample %}
 
-## Checkboxes and radio addons
+## 按钮插件
 
-Place any checkbox or radio option within an input group's addon instead of text.
+输入组内的按钮有一点不同，需要额外的嵌套级别。你需要使用 `.input-group-btn` 去包裹按钮而不是 `.input-group-addon`。这是必须的，因为默认的浏览器风格不能被重写。
 
 {% example html %}
-<div class="row">
-  <div class="col-lg-6">
-    <div class="input-group">
-      <span class="input-group-addon">
-        <input type="checkbox" aria-label="Checkbox for following text input">
-      </span>
-      <input type="text" class="form-control" aria-label="Text input with checkbox">
-    </div>
-  </div>
-  <div class="col-lg-6">
-    <div class="input-group">
-      <span class="input-group-addon">
-        <input type="radio" aria-label="Radio button for following text input">
-      </span>
-      <input type="text" class="form-control" aria-label="Text input with radio button">
-    </div>
-  </div>
-</div>
+
+Go!
+Go!
 {% endexample %}
 
-## Button addons
-
-Buttons in input groups are a bit different and require one extra level of nesting. Instead of `.input-group-addon`, you'll need to use `.input-group-btn` to wrap the buttons. This is required due to default browser styles that cannot be overridden.
+## 具有下拉菜单的按钮
 
 {% example html %}
-<div class="row">
-  <div class="col-lg-6">
-    <div class="input-group">
-      <span class="input-group-btn">
-        <button class="btn btn-secondary" type="button">Go!</button>
-      </span>
-      <input type="text" class="form-control" placeholder="Search for...">
-    </div>
-  </div>
-  <div class="col-lg-6">
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search for...">
-      <span class="input-group-btn">
-        <button class="btn btn-secondary" type="button">Go!</button>
-      </span>
-    </div>
-  </div>
-</div>
-{% endexample %}
 
-## Buttons with dropdowns
-
-{% example html %}
-<div class="row">
-  <div class="col-lg-6">
-    <div class="input-group">
-      <div class="input-group-btn">
-        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Action
-        </button>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-          <div role="separator" class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Separated link</a>
-        </div>
-      </div>
-      <input type="text" class="form-control" aria-label="Text input with dropdown button">
-    </div>
-  </div>
-  <div class="col-lg-6">
-    <div class="input-group">
-      <input type="text" class="form-control" aria-label="Text input with dropdown button">
-      <div class="input-group-btn">
-        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Action
-        </button>
-        <div class="dropdown-menu dropdown-menu-right">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-          <div role="separator" class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Separated link</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+行为
+[行为]( ) [另外一个行为]( ) [一些其他的东西]( )
+[单独的链接]( )
+行为
+[行为]( ) [另外一个行为]( ) [一些其他的东西]( )
+[单独的链接]( )
 {% endexample %}
 
 ## Segmented buttons
 
 {% example html %}
-<div class="row">
-  <div class="col-lg-6">
-    <div class="input-group">
-      <div class="input-group-btn">
-        <button type="button" class="btn btn-secondary">Action</button>
-        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span class="sr-only">Toggle Dropdown</span>
-        </button>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-          <div role="separator" class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Separated link</a>
-        </div>
-      </div>
-      <input type="text" class="form-control" aria-label="Text input with segmented button dropdown">
-    </div>
-  </div>
-  <div class="col-lg-6">
-    <div class="input-group">
-      <input type="text" class="form-control" aria-label="Text input with segmented button dropdown">
-      <div class="input-group-btn">
-        <button type="button" class="btn btn-secondary">Action</button>
-        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span class="sr-only">Toggle Dropdown</span>
-        </button>
-        <div class="dropdown-menu dropdown-menu-right">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-          <div role="separator" class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Separated link</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-{% endexample %}
 
-## Accessibility
+行为触发下拉菜单
+[行为]( ) [另外一个行为]( ) [一些其他的东西]( )
+[单独的链接]( )
+行为触发下拉菜单
+[行为]( ) [另外一个行为]( ) [一些其他的东西]( )
+[单独的链接]( )
+{% example html %}
 
-Screen readers will have trouble with your forms if you don't include a label for every input. For these input groups, ensure that any additional label or functionality is conveyed to assistive technologies.
+## 可访问性
 
-The exact technique to be used (`<label>` elements hidden using the `.sr-only` class, or use of the `aria-label`, `aria-labelledby`, `aria-describedby`, `title` or `placeholder` attribute) and what additional information will need to be conveyed will vary depending on the exact type of interface widget you're implementing. The examples in this section provide a few suggested, case-specific approaches.
+如果不把每个 input 都包含一个标签的话，屏幕阅读器在处理你的表单时可能会有问题。对于这些输入组，要确保任何额外的标签或者功能都要通过辅助技术传达。
+
+需要使用到准确的技术（用 `.sr-only` 类来隐藏 `<label>` 元素，或者使用 `aria-label`, `aria-labelledby`, `aria-describedby`, `title` 或者 `placeholder` 属性），同时需要传达的额外的信息取决于你所使用的接口部件而变化。这一节的例子提供了一些建议的、特定的方法。
