@@ -1,46 +1,29 @@
----
-layout: docs
-title: Labels
-group: components
----
+一种小巧的自适应性的标签，能够为任何内容添加文本。
 
-Small and adaptive tag for adding context to just about any content.
+## 例子
 
-## Example
+labels 通过采用相关的字体大小和 em 单元来与直接父类元素的大小相匹配。
 
-Labels scale to match the size of the immediate parent element by using relative font sizing and `em` units.
+# 新的示例标题
 
-{% example html %}
-<h1>Example heading <span class="label label-default">New</span></h1>
-<h2>Example heading <span class="label label-default">New</span></h2>
-<h3>Example heading <span class="label label-default">New</span></h3>
-<h4>Example heading <span class="label label-default">New</span></h4>
-<h5>Example heading <span class="label label-default">New</span></h5>
-<h6>Example heading <span class="label label-default">New</span></h6>
-{% endexample %}
+## 新的示例标题
 
-## Contextual variations
+### 新的示例标题
 
-Add any of the below mentioned modifier classes to change the appearance of a label.
+#### 新的示例标题
 
-{% example html %}
-<span class="label label-default">Default</span>
-<span class="label label-primary">Primary</span>
-<span class="label label-success">Success</span>
-<span class="label label-info">Info</span>
-<span class="label label-warning">Warning</span>
-<span class="label label-danger">Danger</span>
-{% endexample %}
+##### 新的示例标题
+
+###### 新的示例标题
+
+## 上下文的变化
+
+添加任何一个下方提到的修饰符类来改变 label 的外观。
+
+{% example html %} Default Primary Success Info Warning Danger {% endexample %}
 
 ## Pill labels
 
-Use the `.label-pill` modifier class to make labels more rounded (with a larger `border-radius` and additional horizontal `padding`). Useful if you miss the badges from v3.
+使用 .label-pill 修饰符类来让 labels 变得更圆（有一个大一点的圆角边框和额外的水平空白距离）。当你错过了 v3 的 badges 的时候 .label-pill 就显得很有用。
 
-{% example html %}
-<span class="label label-pill label-default">Default</span>
-<span class="label label-pill label-primary">Primary</span>
-<span class="label label-pill label-success">Success</span>
-<span class="label label-pill label-info">Info</span>
-<span class="label label-pill label-warning">Warning</span>
-<span class="label label-pill label-danger">Danger</span>
-{% endexample %}
+{% example html %} Default Primary Success Info Warning Danger {% endexample %}
