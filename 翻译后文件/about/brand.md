@@ -42,4 +42,3 @@ B
 ##颜色  
  
 我们的文档和品牌使用少量原色来区分 Bootstrap 以及 Bootstrap 里的内容。换句话说，如果它是紫色的，则表示 Bootstrap 。
-
