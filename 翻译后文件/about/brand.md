@@ -1,76 +1,45 @@
----
-layout: docs
-title: Brand guidelines
-group: about
----
 
-Have a need for Bootstrap's brand resources? Great! We have only a few guidelines we follow, and in turn ask you to follow as well. These guidelines were inspired by MailChimp's [Brand Assets](http://mailchimp.com/about/brand-assets/).
+<table>
+<tbody>
+<tr><td><em>layout</em></td><td><em>title</em></td><td><em>group</em></td></tr>
+<tr><td>docs</td><td>Brand guidelines</td><td>about</td></tr>
+</tbody>
+</table>
 
-## Mark and logo
+需要 Bootstrap 的品牌资源？太好了！我们只有我们遵循并且反过来要求你们一样遵循的几条准则，这些准则的灵感来自 MailChimp 的品牌资产。
 
-Use either the Bootstrap mark (a capital **B**) or the standard logo (just **Bootstrap**). It should always appear in Helvetica Neue Bold. **Do not use the Twitter bird** in association with Bootstrap.
+##标志和标识
 
-<div class="bd-brand-logos">
-  <div class="bd-brand-item">
-    <div class="bd-booticon bd-booticon-lg">B</div>
-  </div>
-  <div class="bd-brand-item inverse">
-    <div class="bd-booticon bd-booticon-lg bd-booticon-inverse">B</div>
-  </div>
-</div>
-<div class="bd-brand-logos">
-  <div class="bd-brand-item">
-    <h1>Bootstrap</h1>
-  </div>
-  <div class="bd-brand-item inverse">
-    <h1>Bootstrap</h1>
-  </div>
-</div>
+使用 Bootstrap 标记（大写的 **B** ）或标准标识（**Bootstrap**）。应该出现 Helvetica Neue 加粗字体。**不要用 Twitter bird** 和 Bootstrap。   
+B   
+B  
+#Bootstrap 
+ 
+#Bootstrap  
 
-## Download mark
+##下载标志
 
-Download the Bootstrap mark in one of three styles, each available as an SVG file. Right click, Save as.
+下载三种风格之一的 Bootstrap 标志，每种都有一个 SVG 文件，右键单击，另存为。   
 
-<div class="bd-brand-logos">
-  <div class="bd-brand-item">
-    <img class="svg" src="{{ site.baseurl }}/assets/brand/bootstrap-solid.svg" alt="Bootstrap" width="144" height="144">
-  </div>
-  <div class="bd-brand-item inverse">
-    <img class="svg" src="{{ site.baseurl }}/assets/brand/bootstrap-outline.svg" alt="Bootstrap" width="144" height="144">
-  </div>
-  <div class="bd-brand-item inverse">
-    <img class="svg" src="{{ site.baseurl }}/assets/brand/bootstrap-punchout.svg" alt="Bootstrap" width="144" height="144">
-  </div>
-</div>
+[https://github.com/bitmoonz/bootstrapcn/blob/master/about/%7B%7B%20site.baseurl%20%7D%7D/assets/brand/bootstrap-solid.svg](https://github.com/bitmoonz/bootstrapcn/blob/master/about/%7B%7B%20site.baseurl%20%7D%7D/assets/brand/bootstrap-solid.svg)   
+[https://github.com/bitmoonz/bootstrapcn/blob/master/about/%7B%7B%20site.baseurl%20%7D%7D/assets/brand/bootstrap-outline.svg](https://github.com/bitmoonz/bootstrapcn/blob/master/about/%7B%7B%20site.baseurl%20%7D%7D/assets/brand/bootstrap-outline.svg)   
+[https://github.com/bitmoonz/bootstrapcn/blob/master/about/%7B%7B%20site.baseurl%20%7D%7D/assets/brand/bootstrap-punchout.svg](https://github.com/bitmoonz/bootstrapcn/blob/master/about/%7B%7B%20site.baseurl%20%7D%7D/assets/brand/bootstrap-punchout.svg)
+ 
 
-## Name
 
-The project and framework should always be referred to as **Bootstrap**. No Twitter before it, no capital _s_, and no abbreviations except for one, a capital **B**.
+##命名  
 
-<div class="bd-brand-logos">
-  <div class="bd-brand-item">
-    <h3>Bootstrap</h3>
-    <strong class="text-success">Right</strong>
-  </div>
-  <div class="bd-brand-item">
-    <h3 class="text-muted">BootStrap</h3>
-    <strong class="text-warning">Wrong</strong>
-  </div>
-  <div class="bd-brand-item">
-    <h3 class="text-muted">Twitter Bootstrap</h3>
-    <strong class="text-warning">Wrong</strong>
-  </div>
-</div>
+项目和框架应该总是被命名为 **Bootstrap** 。在它之前没有 Twitter ，没有大写的 *s* ，也没有缩写，除了一个大写的 **B**。
 
-## Colors
 
-Our docs and branding use a handful of primary colors to differentiate what *is* Bootstrap from what *is in* Bootstrap. In other words, if it's purple, it's representative of Bootstrap.
+###Bootstrap  
+正确     
+###BootStrap   
+错误     
+###Twitter Bootstrap   
+错误  
 
-<div class="bd-brand">
-  <div class="color-swatches">
-    <div class="color-swatch bd-purple"></div>
-    <div class="color-swatch bd-purple-light"></div>
-    <div class="color-swatch bd-purple-lighter"></div>
-    <div class="color-swatch bd-gray"></div>
-  </div>
-</div>
+##颜色  
+ 
+我们的文档和品牌使用少量原色来区分 Bootstrap 以及 Bootstrap 里的内容。换句话说，如果它是紫色的，则表示 Bootstrap 。
+
