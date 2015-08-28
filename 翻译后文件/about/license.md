@@ -1,33 +1,34 @@
----
-layout: docs
-title: License FAQs
-group: about
----
 
-Bootstrap is released under the MIT license and is copyright {{ site.time | date: "%Y" }} Twitter. Boiled down to smaller chunks, it can be described with the following conditions.
+<table>
+<tbody>
+<tr><td><em>layout</em></td><td><em>title</em></td><td><em>group</em></td></tr>
+<tr><td>docs</td><td>License FAQs</td><td>about</td></tr>
+</tbody>
+</table>
 
-#### It requires you to:
+Bootstrap 在 MIT 许可协议下发布，它的版权是 {{ site.time | date: "%Y" }} Twitter。将其归结为较小的模块，它可以描述满足以下条件。
 
-* Keep the license and copyright notice included in Bootstrap's CSS and JavaScript files when you use them in your works
+##它要求：
 
-#### It permits you to:
+- 你必须在你使用的 Bootstrap 的 CSS 和 JavaScript 文件中保留许可和版权声明。
 
-- Freely download and use Bootstrap, in whole or in part, for personal, private, company internal, or commercial purposes
-- Use Bootstrap in packages or distributions that you create
-- Modify the source code
-- Grant a sublicense to modify and distribute Bootstrap to third parties not included in the license
+##它允许：
 
-#### It forbids you to:
+- 免费下载和使用整体或部分 Bootstrap ，无论用于个人，私人，公司内部或者商业用途
+- 在您创建的包或发行版中使用 Bootstrap 
+- 修改源代码
+- 向没有许可证的第三方授予从属许可修改并发布 Bootstrap 
 
-- Hold the authors and license owners liable for damages as Bootstrap is provided without warranty
-- Hold the creators or copyright holders of Bootstrap liable
-- Redistribute any piece of Bootstrap without proper attribution
-- Use any marks owned by Twitter in any way that might state or imply that Twitter endorses your distribution
-- Use any marks owned by Twitter in any way that might state or imply that you created the Twitter software in question
+##它禁止：
 
-#### It does not require you to:
+- 持有作者和许可证拥有者的赔偿责任，因为以 Bootstrap 无担保形式提供
+- 重新发布 Bootstrap 的任何部分而没有标明出处
+- 以任何方式使用任何 Twitter 拥有的标记明示或暗示，Twitter 赞同您的发行版
+- 以任何方式使用任何 Twitter 拥有的标记明示或暗示，您创建了一个 Twitter 软件
 
-- Include the source of Bootstrap itself, or of any modifications you may have made to it, in any redistribution you may assemble that includes it
-- Submit changes that you make to Bootstrap back to the Bootstrap project (though such feedback is encouraged)
+##它不要求：
 
-The full Bootstrap license is located [in the project repository]({{ site.repo }}/blob/master/LICENSE) for more information.
+- 包括 Bootstrap 自身在内，或您可能对它做的任何修改，你可以组装任何重新发布的版本
+- 提交您对 Bootstrap 所做的更改到 Bootstrap 项目（尽管鼓励这种反馈）
+
+更多详细信息请参阅[项目资源库](https://github.com/bitmoonz/bootstrapcn/blob/master/about/%7B%7B%20site.repo%20%7D%7D/blob/master/LICENSE)中 Bootstrap 全面地许可信息
