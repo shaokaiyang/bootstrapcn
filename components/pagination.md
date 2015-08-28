@@ -1,179 +1,111 @@
----
-layout: docs
-title: Pagination
-group: components
----
+|布局|标题|分组|
+| ------------- |:-------------:| -----:|
+|docs|分页|组件|
 
-Provide pagination links for your site or app with the multi-page pagination component, or the simpler [pager alternative](#pager).
+通过多页分页组件或简单的可选择的 Pager 为您的网站或应用程序提供分页链接
 
-## Contents
+# 内容
 
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
+将被 ToC 取代，"Contents" header {:toc} 除外。
 
-## Default pagination
+# 默认分页
 
-Simple pagination inspired by Rdio, great for apps and search results. The large block is hard to miss, easily scalable, and provides large click areas.
+Rdio 提倡的简单分页，极大程度上是为了应用和搜索结果。大的块不容易被丢失，易于扩展，并且提供大的点击区域。
 
 {% example html %}
-<nav>
-  <ul class="pagination">
-    <li>
-      <a href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-        <span class="sr-only">Previous</span>
-      </a>
-    </li>
-    <li><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li>
-    <li>
-      <a href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-        <span class="sr-only">Next</span>
-      </a>
-    </li>
-  </ul>
-</nav>
+
+- [« Previous](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/pagination.md#)
+- [1](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/pagination.md#)
+- [2](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/pagination.md#)
+- [3](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/pagination.md#)
+- [4](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/pagination.md#)
+- [5](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/pagination.md#)
+- [» Next](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/pagination.md#)
+
 {% endexample %}
 
-### Disabled and active states
+# 禁用的和活动的状态
 
-Links are customizable for different circumstances. Use `.disabled` for unclickable links and `.active` to indicate the current page.
+对不同的环境，链接是自定义的。对取消选中的链接使用 `.disabled`，`.active` 指示当前页。
 
 {% example html %}
-<nav>
-  <ul class="pagination">
-    <li class="disabled">
-      <a href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-        <span class="sr-only">Previous</span>
-      </a>
-    </li>
-    <li class="active">
-      <a href="#">1 <span class="sr-only">(current)</span></a>
-    </li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li>
-    <li>
-      <a href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-        <span class="sr-only">Next</span>
-      </a>
-    </li>
-  </ul>
-</nav>
+ 
+- [« Previous](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/pagination.md#)
+- [1 (current)](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/pagination.md#) 
+- [2](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/pagination.md#)
+- [3](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/pagination.md#)
+- [4](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/pagination.md#)
+- [5](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/pagination.md#)
+- [» Next](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/pagination.md#)
+
 {% endexample %}
 
-You can optionally swap out active or disabled anchors for `<span>`, or omit the anchor in the case of the prev/next arrows, to remove click functionality while retaining intended styles.
+您可以为 <span> 选择交换出活动或禁用的锚点，或者就 prev/next 箭头而言省略锚点，以此来删除单机功能同时保留样式。
 
 {% highlight html %}
-<nav>
-  <ul class="pagination">
-    <li class="disabled">
-      <span aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-        <span class="sr-only">Previous</span>
-      </span>
-    </li>
-    <li class="active"><span>1 <span class="sr-only">(current)</span></span></li>
-  </ul>
-</nav>
+
+- « Previous 
+- 1 (current)
+
 {% endhighlight %}
 
+# 分级
 
-### Sizing
-
-Fancy larger or smaller pagination? Add `.pagination-lg` or `.pagination-sm` for additional sizes.
+想要更大或更小的分页吗？为附加规格添加 `.pagination-lg`或 `.pagination-sm` 吧。
 
 {% example html %}
-<nav>
-  <ul class="pagination pagination-lg">
-    <li>
-      <a href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-        <span class="sr-only">Previous</span>
-      </a>
-    </li>
-    <li><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
-    <li>
-      <a href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-        <span class="sr-only">Next</span>
-      </a>
-    </li>
-  </ul>
-</nav>
+
+- [« Previous](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/pagination.md#)
+- [1](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/pagination.md#)
+- [2](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/pagination.md#)
+- [3](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/pagination.md#)
+- [» Next](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/pagination.md#)
+  
 {% endexample %}
 
 {% example html %}
-<nav>
-  <ul class="pagination pagination-sm">
-    <li>
-      <a href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-        <span class="sr-only">Previous</span>
-      </a>
-    </li>
-    <li><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
-    <li>
-      <a href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-        <span class="sr-only">Next</span>
-      </a>
-    </li>
-  </ul>
-</nav>
+ 
+- [« Previous](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/pagination.md#)
+- [1](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/pagination.md#)
+- [2](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/pagination.md#)
+- [3](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/pagination.md#)
+- [» Next](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/pagination.md#)
+ 
 {% endexample %}
 
-## Pager
+#  Pager 
 
-Quick previous and next links for simple pagination implementations with light markup and styles. It's great for simple sites like blogs or magazines.
+简单分页的快速的上一个和下一个链接实现了光标记和样式。这对简单的像博客或杂志的网站来说很棒。
 
-### Default example
+# 默认实例
 
-By default, the pager centers links.
+默认情况下，Pager 会将链接居中。
 
 {% example html %}
-<nav>
-  <ul class="pager">
-    <li><a href="#">Previous</a></li>
-    <li><a href="#">Next</a></li>
-  </ul>
-</nav>
+ 
+- [Previous](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/pagination.md#)
+- [Next](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/pagination.md#)
+
 {% endexample %}
 
-### Aligned links
+# 对齐的链接
 
-Alternatively, you can align each link to the sides:
+或者，您可以将链接设置为左或右对齐：
 
 {% example html %}
-<nav>
-  <ul class="pager">
-    <li class="pager-prev"><a href="#">Older</a></li>
-    <li class="pager-next"><a href="#">Newer</a></li>
-  </ul>
-</nav>
+ 
+- [Older](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/pagination.md#)
+- [Newer](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/pagination.md#)
+
 {% endexample %}
 
+# 可选禁用状态
 
-### Optional disabled state
-
-Pager links also use the `.disabled` class.
+Pager 链接也使用 `.disabled` 类。
 
 {% example html %}
-<nav>
-  <ul class="pager">
-    <li class="pager-prev disabled"><a href="#">Older</a></li>
-    <li class="pager-next"><a href="#">Newer</a></li>
-  </ul>
-</nav>
+
+- [Older](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/pagination.md#)
+- [Newer](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/pagination.md#)
+
 {% endexample %}
