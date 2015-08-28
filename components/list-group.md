@@ -1,132 +1,80 @@
----
-layout: docs
-title: List group
-group: components
----
+list groups 是灵活而且强大的组件，不仅可以用来展示一些简单的元素列表，同样也能展示 那些有自定义内容的复杂元素。
 
-List groups are a flexible and powerful component for displaying not only simple lists of elements, but complex ones with custom content.
+## 内容
 
-## Contents
+- 它将会被 ToC 替代，除“内容”头部之外
 
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
+## 基本示例
 
-## Basic example
-<p>The most basic list group is simply an unordered list with list items, and the proper classes. Build upon it with the options that follow, or your own CSS as needed.</p>
+最基本的 list group 仅仅是一个拥有列表项和适当的类的无序列表。在这基础上可以使用下列选项，或者有需要的话也可以是你自己的 CSS。
 
 {% example html %}
-<ul class="list-group">
-  <li class="list-group-item">Cras justo odio</li>
-  <li class="list-group-item">Dapibus ac facilisis in</li>
-  <li class="list-group-item">Morbi leo risus</li>
-  <li class="list-group-item">Porta ac consectetur ac</li>
-  <li class="list-group-item">Vestibulum at eros</li>
-</ul>
-{% endexample %}
 
-## Labels
-
-Add labels to any list group item to show unread counts, activity, etc.
+- Cras justo odio
+- Dapibus ac facilisis in
+- Morbi leo risus
+- Porta ac consectetur ac
+- Vestibulum at eros
 
 {% example html %}
-<ul class="list-group">
-  <li class="list-group-item">
-    <span class="label label-default label-pill pull-right">14</span>
-    Cras justo odio
-  </li>
-  <li class="list-group-item">
-    <span class="label label-default label-pill pull-right">2</span>
-    Dapibus ac facilisis in
-  </li>
-  <li class="list-group-item">
-    <span class="label label-default label-pill pull-right">1</span>
-    Morbi leo risus
-  </li>
-</ul>
-{% endexample %}
 
-## Linked items
+## 标签
 
-Linkify list group items by using anchor tags instead of list items (that also means a parent `<div>` instead of an `<ul>`). No need for individual parents around each element.
+给任意 list group 项添加标签来展示一些未读的计数、活动等等。
 
 {% example html %}
-<div class="list-group">
-  <a href="#" class="list-group-item active">
-    Cras justo odio
-  </a>
-  <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-  <a href="#" class="list-group-item">Morbi leo risus</a>
-  <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-  <a href="#" class="list-group-item">Vestibulum at eros</a>
-</div>
-{% endexample %}
 
-## Button items
-
-List group items may be buttons instead of list items (that also means a parent `<div>` instead of an `<ul>`). No need for individual parents around each element. **Don't use the standard `.btn` classes here.**
+- 14 Cras justo odio
+- 2 Dapibus ac facilisis in
+- 1 Morbi leo risus
 
 {% example html %}
-<div class="list-group">
-  <button type="button" class="list-group-item">Cras justo odio</button>
-  <button type="button" class="list-group-item">Dapibus ac facilisis in</button>
-  <button type="button" class="list-group-item">Morbi leo risus</button>
-  <button type="button" class="list-group-item">Porta ac consectetur ac</button>
-  <button type="button" class="list-group-item">Vestibulum at eros</button>
-</div>
-{% endexample %}
 
-## Disabled items
+## 链接项
 
-Add `.disabled` to a `.list-group-item` to gray it out to appear disabled.
+通过使用锚点而非列表项来给 list group 项添加链接（同样也意味着是一个父类的 <div> 而不是 <ul>）。对每个元素周围独立的父类来说没有必要。
 
 {% example html %}
-<div class="list-group">
-  <a href="#" class="list-group-item disabled">
-    Cras justo odio
-  </a>
-  <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-  <a href="#" class="list-group-item">Morbi leo risus</a>
-  <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-  <a href="#" class="list-group-item">Vestibulum at eros</a>
-</div>
-{% endexample %}
 
-## Contextual classes
+[Cras justo odio](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/list-group.md#) [Dapibus ac facilisis in](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/list-group.md#) [Morbi leo risus](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/list-group.md#) [Porta ac consectetur ac](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/list-group.md#) [Vestibulum at eros](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/list-group.md#)
+{% example html %}
 
-Use contextual classes to style list items, default or linked. Also includes `.active` state.
+## 按钮箱
+
+list group 可能是按钮而不是列表项（同样也意味着是一个父类的 <div> 而不是 <ul>）。
+对每个元素周围独立的父类来说没有必要。这里不要使用标准的 .btn 类。
 
 {% example html %}
-<ul class="list-group">
-  <li class="list-group-item list-group-item-success">Dapibus ac facilisis in</li>
-  <li class="list-group-item list-group-item-info">Cras sit amet nibh libero</li>
-  <li class="list-group-item list-group-item-warning">Porta ac consectetur ac</li>
-  <li class="list-group-item list-group-item-danger">Vestibulum at eros</li>
-</ul>
-<div class="list-group">
-  <a href="#" class="list-group-item list-group-item-success">Dapibus ac facilisis in</a>
-  <a href="#" class="list-group-item list-group-item-info">Cras sit amet nibh libero</a>
-  <a href="#" class="list-group-item list-group-item-warning">Porta ac consectetur ac</a>
-  <a href="#" class="list-group-item list-group-item-danger">Vestibulum at eros</a>
-</div>
-{% endexample %}
 
-## Custom content
+Cras justo odio Dapibus ac facilisis in Morbi leo risus Porta ac consectetur ac Vestibulum at eros
+{% example html %}
 
-Add nearly any HTML within, even for linked list groups like the one below.
+## 禁用项
+
+添加 .disabled 到 .list-group-item 来让它显示灰色，呈现出禁用状态。
 
 {% example html %}
-<div class="list-group">
-  <a href="#" class="list-group-item active">
-    <h4 class="list-group-item-heading">List group item heading</h4>
-    <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-  </a>
-  <a href="#" class="list-group-item">
-    <h4 class="list-group-item-heading">List group item heading</h4>
-    <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-  </a>
-  <a href="#" class="list-group-item">
-    <h4 class="list-group-item-heading">List group item heading</h4>
-    <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-  </a>
-</div>
-{% endexample %}
+
+[Cras justo odio](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/list-group.md#) [Dapibus ac facilisis in](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/list-group.md#) [Morbi leo risus](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/list-group.md#) [Porta ac consectetur ac](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/list-group.md#) [Vestibulum at eros](https://github.com/yangxuanxc/bootstrapcn/blob/master/components/list-group.md#)
+{% example html %}
+
+## 自定义内容
+
+几乎在任何的 HTML 中都有，即使是像下列链接的 list groups。
+
+{% example html %}
+
+### List group 项标题
+
+Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+
+### List group 项标题
+
+Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+
+### List group 项标题
+
+Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+
+{% example html %}
+
