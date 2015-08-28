@@ -1,21 +1,11 @@
----
-layout: docs
-title: Team
-group: about
----
+<table>
+<tbody>
+<tr><td><em>layout</em></td><td><em>title</em></td><td><em>group</em></td></tr>
+<tr><td>docs</td><td>Team</td><td>about</td></tr>
+</tbody>
+</table>
 
-Bootstrap is maintained by the founding team and a small group of invaluable core contributors, with the massive support and involvement of our community.
-
-<div class="list-group bd-team">
-  {% for member in site.data.core-team %}
-    <div class="list-group-item">
-      <iframe class="github-btn" src="https://ghbtns.com/github-btn.html?user={{ member.user }}&amp;type=follow"></iframe>
-      <a class="team-member" href="https://github.com/{{ member.user }}">
-        <img src="https://secure.gravatar.com/avatar/{{ member.gravatar }}" alt="@{{ member.user }}" width="32" height="32">
-        <strong>{{ member.name }}</strong> <small>@{{ member.user }}</small>
-      </a>
-    </div>
-  {% endfor %}
-</div>
-
-Get involved with Bootstrap development by [opening an issue](https://github.com/twbs/bootstrap/issues/new) or submitting a pull request. Read our [contributing guidelines](https://github.com/twbs/bootstrap/blob/master/CONTRIBUTING.md) for information on how we develop.
+{% for member in site.data.core-team %}  
+[{{ member.name }} @{{ member.user }}](https://github.com/%7B%7B%20member.user%20%7D%7D)    
+{% endfor %}    
+通过[提出一个问题](https://github.com/twbs/bootstrap/issues/new)或[提交一个请求](https://github.com/twbs/bootstrap/blob/master/CONTRIBUTING.md)，参与 Bootstrap 程序开发。阅读关于我们如何发展的贡献引导。
