@@ -24,6 +24,6 @@ labels 通过采用相关的字体大小和 em 单元来与直接父类元素的
 
 ## Pill labels
 
-使用 .label-pill 修饰符类来让 labels 变得更圆（有一个大一点的圆角边框和额外的水平空白距离）。当你错过了 v3 的 badges 的时候 .label-pill 就显得很有用。
+使用 `.label-pill` 修饰符类来让 labels 变得更圆（有一个大一点的圆角边框和额外的水平空白距离）。当你错过了 v3 的 badges 的时候 `.label-pill` 就显得很有用。
 
 {% example html %} Default Primary Success Info Warning Danger {% endexample %}
