@@ -1,26 +1,27 @@
 ---
-布局: 文档
-标题: 折叠板
-组: 组件
+layout: docs
+title: Collapse
+group: components
 ---
 
-Bootstrap 折叠插件允许你在你的页面上使用少量 JavaScript 和一些类来打开或者关闭内容。一个利用少量类的可以具有开关功能的灵活的插件 (来自 **必要的 [过渡插件]({{ site.baseurl }}/components/transitions/)**)。
+The Bootstrap collapse plugin allows you to toggle content on your pages with a bit of JavaScript and some classes. Flexible plugin that utilizes a handful of classes (from the **required [transitions plugin]({{ site.baseurl }}/components/transitions/)**) for easy toggle behavior.
 
-## 内容
+## Contents
 
-* 将要被 ToC 替换, 除了 "内容" 头部。
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
 
-## 例子
+## Example
 
-点击下面的按钮通过改变类来展示和隐藏其他元素。
+Click the buttons below to show and hide another element via class changes:
 
-- `.collapse` 隐藏内容
-- `.collapsing` 在过渡的时候用到
-- `.collapse.in` 展示内容
+- `.collapse` hides content
+- `.collapsing` is applied during transitions
+- `.collapse.in` shows content
 
-你可以使用 `href` 这个属性来使用链接，或者使用 `data-target` 属性来使用按钮。在这两个类里面，都需要 `data-toggle="collapse"` 这个类。
+You can use a link with the `href` attribute, or a button with the `data-target` attribute. In both cases, the `data-toggle="collapse"` is required.
 
-{% 例子 html %}
+{% example html %}
 <p>
   <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
     Link with href
@@ -34,13 +35,13 @@ Bootstrap 折叠插件允许你在你的页面上使用少量 JavaScript 和一�
     Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
   </div>
 </div>
-{% 结束例子 %}
+{% endexample %}
 
-## 手风琴例子
+## Accordion example
 
-通过扩展默认的的折叠行为来创建一个手风琴。
+Extend the default collapse behavior to create an accordion.
 
-{% 例子 html %}
+{% example html %}
 <div id="accordion" role="tablist" aria-multiselectable="true">
   <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="headingOne">
@@ -79,41 +80,41 @@ Bootstrap 折叠插件允许你在你的页面上使用少量 JavaScript 和一�
     </div>
   </div>
 </div>
-{% 结束例子 %}
+{% endexample %}
 
-## 易用性
+## Accessibility
 
-请务必给控件元素增加 `aria-expanded` 这个类。这个属性给现代屏幕阅读器或者类似的辅助技术明确的定义了折叠元素当前的状态。如果这个折叠元素是默认关闭的，那么它将会有一个 `aria-expanded="false"` 属性。如果你想这个折叠元素默认情况下是打开的，那么在控件上设置 `aria-expanded="true"` 即可。不管这个折叠的元素是打开还是关闭的，这个插件将会自动的开关。
+Be sure to add `aria-expanded` to the control element. This attribute explicitly defines the current state of the collapsible element to screen readers and similar assistive technologies. If the collapsible element is closed by default, it should have a value of `aria-expanded="false"`. If you've set the collapsible element to be open by default using the `in` class, set `aria-expanded="true"` on the control instead. The plugin will automatically toggle this attribute based on whether or not the collapsible element has been opened or closed.
 
-此外，如果你的控件只是想简单的要一个开关效果－比如这个 `data-target` 属性与一个 `id` 选择器绑定，那么只需要将这个 `id` 包含在折叠元素里面。现代屏幕阅读器或者类似的辅助技术充分利用这个属性来给用户提供额外的直接在导航的折叠元素之间导航的捷径。
+Additionally, if your control element is targetting a single collapsible element – i.e. the `data-target` attribute is pointing to an `id` selector – you may add an additional `aria-controls` attribute to the control element, containing the `id` of the collapsible element. Modern screen readers and similar assistive technologies make use of this attribute to provide users with additional shortcuts to navigate directly to the collapsible element itself.
 
-## 用法
+## Usage
 
-这个折叠插件使用了一些类来处理折叠行为：
+The collapse plugin utilizes a few classes to handle the heavy lifting:
 
-- `.collapse` 隐藏内容
-- `.collapse.in` 展示内容
-- `.collapsing` 当过渡开始的时候被加上，当过渡结束的时候被移除
+- `.collapse` hides the content
+- `.collapse.in` shows the content
+- `.collapsing` is added when the transition starts, and removed when it finishes
 
-这些类可以在 `_animation.scss` 找到。
+These classes can be found in `_animation.scss`.
 
-### 通过数据属性
+### Via data attributes
 
-只需要增加 `data-toggle="collapse"` 并且一个 `data-target` 就可以自动的让这个元素成为可折叠元素。这个 `data-target` 属性接受一个 CSS 选择器来执行这个折叠。务必给这个折叠的元素增加 `collapse` 这个类。如果你想默认情况下是开着的，那么只需要额外的增加 `in` 这个类。
+Just add `data-toggle="collapse"` and a `data-target` to the element to automatically assign control of a collapsible element. The `data-target` attribute accepts a CSS selector to apply the collapse to. Be sure to add the class `collapse` to the collapsible element. If you'd like it to default open, add the additional class `in`.
 
-给一个可折叠控件增加一个类似手风琴的效果，只需要增加 `data-parent="#selector"`这个属性。可以参考在这个实践中的例子。
+To add accordion-like group management to a collapsible control, add the data attribute `data-parent="#selector"`. Refer to the demo to see this in action.
 
-### 通过 JavaScript
+### Via JavaScript
 
-手动开启:
+Enable manually with:
 
 {% highlight js %}
 $('.collapse').collapse()
 {% endhighlight %}
 
-### 选项
+### Options
 
-选项可以通过数据属性或者 JavaScript 来传递。对于数据属性，在选项名前面加上 `data-`，比如 `data-parent=""`。
+Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-parent=""`.
 
 <div class="table-responsive">
   <table class="table table-bordered table-striped">
@@ -142,11 +143,11 @@ $('.collapse').collapse()
   </table>
 </div>
 
-### 方法
+### Methods
 
 #### .collapse(options)
 
-将你的元素激活为一个可折叠元素。接收一个可选的参数 `object`。
+Activates your content as a collapsible element. Accepts an optional options `object`.
 
 {% highlight js %}
 $('#myCollapsible').collapse({
@@ -156,19 +157,19 @@ $('#myCollapsible').collapse({
 
 #### .collapse('toggle')
 
-触发一个可折叠元素打开或者关闭。
+Toggles a collapsible element to shown or hidden.
 
 #### .collapse('show')
 
-展示一个可折叠元素。
+Shows a collapsible element.
 
 #### .collapse('hide')
 
-隐藏一个可折叠元素。
+Hides a collapsible element.
 
-### 事件
+### Events
 
-Bootstrap 的给绑定折叠功能提供了一些事件。
+Bootstrap's collapse class exposes a few events for hooking into collapse functionality.
 
 <div class="table-responsive">
   <table class="table table-bordered table-striped">
