@@ -1,18 +1,19 @@
 ---
-布局: 文档
-标题: 旋转木马
-组: 组件
+layout: docs
+title: Carousel
+group: components
 ---
 
-一个可以让元素－图片或者文本幻灯片－滚动的组件，就像一个旋转木马一样。**嵌套的旋转木马将不再被支持。**
+A slideshow component for cycling through elements—images or slides of text—like a carousel. **Nested carousels are not supported.**
 
-## 内容
+## Contents
 
-* 将要被 ToC 替换, 除了 "内容" 头部。
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
 
-## 例子
+## Example
 
-{% 例子 html %}
+{% example html %}
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -39,23 +40,23 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-{% 例子结束 %}
+{% endexample %}
 
-{% 插图编号警告 %}
-#### 在 Internet Explorer 9 过渡动画将不再被支持
+{% callout warning %}
+#### Transition animations not supported in Internet Explorer 9
 
-Bootstrap 专门使用为它的动画使用 CSS3，但是 Internet Explorer 9 并不支持必要的 CSS 属性。因此，当使用这个浏览器的时候将不会再有滑动的过渡动画。我们专门决定不引用基于 jQuery 的兼容动画。
-{% 结束插图编号 %}
+Bootstrap exclusively uses CSS3 for its animations, but Internet Explorer 9 doesn't support the necessary CSS properties. Thus, there are no slide transition animations when using that browser. We have intentionally decided not to include jQuery-based fallbacks for the transitions.
+{% endcallout %}
 
-{% 插图编号警告 %}
-#### 需要初始化活跃的元素
+{% callout warning %}
+#### Initial active element required
 
-`.active` 这个类需要给其中的某一个幻灯片加上，否则，旋转木马将不会被显示。
-{% 结束插图编号 %}
+The `.active` class needs to be added to one of the slides. Otherwise, the carousel will not be visible.
+{% endcallout %}
 
-### 可选项
+### Optional captions
 
-在任何 `.carousel-item` 里面你都可以轻松的通过使用 `.carousel-caption` 来给你的幻灯片加上说明文字。在那里面加上任何可选的 HTML，都将自动的对齐和格式化。
+Add captions to your slides easily with the `.carousel-caption` element within any `.carousel-item`. Place just about any optional HTML within there and it will be automatically aligned and formatted.
 
 <div class="bd-example">
   <div id="carousel-example-captions" class="carousel slide" data-ride="carousel">
@@ -98,7 +99,7 @@ Bootstrap 专门使用为它的动画使用 CSS3，但是 Internet Explorer 9 �
   </div>
 </div>
 
-{% 高亮 html %}
+{% highlight html %}
 <div class="carousel-item">
   <img src="..." alt="...">
   <div class="carousel-caption">
@@ -106,37 +107,37 @@ Bootstrap 专门使用为它的动画使用 CSS3，但是 Internet Explorer 9 �
     <p>...</p>
   </div>
 </div>
-{% 结束高亮 %}
+{% endhighlight %}
 
-{% 插图编号警告 %}
-#### 易用性问题
+{% callout danger %}
+#### Accessibility issue
 
-这个旋转木马组件通常与易用性原则不冲突。如果你需要服从，请考虑展示你的内容的其他选择。
-{% 结束插图编号 %}
+The carousel component is generally not compliant with accessibility standards. If you need to be compliant, please consider other options for presenting your content.
+{% endcallout %}
 
-## 用法
+## Usage
 
-### 多个旋转木马
+### Multiple carousels
 
-旋转木马需要在最外面的容器上使用一个 `id`（这个 `.carousel` ）来让旋转木马控件正常工作。当新增多个幻灯片的时候，或者当改变转转木马的 `id` 的时候，务必更新与其相关的控件。
+Carousels require the use of an `id` on the outermost container (the `.carousel`) for carousel controls to function properly. When adding multiple carousels, or when changing a carousel's `id`, be sure to update the relevant controls.
 
-### 使用数据属性
+### Via data attributes
 
-使用数据属性来轻松的控制旋转木马的位置。`data-slide` 接受 `prev` 或者 `next` 这两个可以改变幻灯片当前位置的关键字。另外，使用 `data-slide-to` 来给旋转木马的 `data-slide-to="2"` 来传递一个原生的索引，这个可以让幻灯片的处于一个从 `0` 开始的指定的位置。
+Use data attributes to easily control the position of the carousel. `data-slide` accepts the keywords `prev` or `next`, which alters the slide position relative to its current position. Alternatively, use `data-slide-to` to pass a raw slide index to the carousel `data-slide-to="2"`, which shifts the slide position to a particular index beginning with `0`.
 
-这个 `data-ride="carousel"` 属性用来标识动画加载一个旋转木马当一个当页面加载的时候。**这不可以与明确的 JavaScript 初始化同一个旋转木马结合使用。**
+The `data-ride="carousel"` attribute is used to mark a carousel as animating starting at page load. **It cannot be used in combination with (redundant and unnecessary) explicit JavaScript initialization of the same carousel.**
 
-### 使用 JavaScript
+### Via JavaScript
 
-手动调用旋转木马:
+Call carousel manually with:
 
-{% 高亮 js %}
+{% highlight js %}
 $('.carousel').carousel()
-{% 结束高亮 %}
+{% endhighlight %}
 
-### 选项
+### Options
 
-选项可以通过数据属性或者 JavaScript 传递。对于数据属性，在属性名字前面加上 `data-` ，比如 `data-interval=""`。
+Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-interval=""`.
 
 <div class="table-responsive">
   <table class="table table-bordered table-striped">
@@ -177,11 +178,11 @@ $('.carousel').carousel()
   </table>
 </div>
 
-### 方法
+### Methods
 
 #### .carousel(options)
 
-通过使用一个可选的 `object` 参数来初始化一个旋转木马并且开始旋转。
+Initializes the carousel with an optional options `object` and starts cycling through items.
 
 {% highlight js %}
 $('.carousel').carousel({
@@ -191,32 +192,32 @@ $('.carousel').carousel({
 
 #### .carousel('cycle')
 
-从左到右开始旋转。
+Cycles through the carousel items from left to right.
 
 #### .carousel('pause')
 
-通过选项暂停旋转木马。
+Stops the carousel from cycling through items.
 
 #### .carousel(number)
 
-通过一个特定的数字来旋转（从 0 开始，就像一个数组）。
+Cycles the carousel to a particular frame (0 based, similar to an array).
 
 #### .carousel('prev')
 
-旋转到前一个幻灯片。
+Cycles to the previous item.
 
 #### .carousel('next')
 
-旋转到下一个幻灯片。
+Cycles to the next item.
 
-### 事件
+### Events
 
-Bootstrap 的旋转木马类提供了 2 个绑定旋转木马功能的事件。这两个事件都有额外的属性：
+Bootstrap's carousel class exposes two events for hooking into carousel functionality. Both events have the following additional properties:
 
-- `direction`: 这个旋转木马旋转的方向（`"left"` 或者 `"right"`）。
-- `relatedTarget`: 旋转到的活跃的 DOM 节点。
+- `direction`: The direction in which the carousel is sliding (either `"left"` or `"right"`).
+- `relatedTarget`: The DOM element that is being slid into place as the active item.
 
-所有的旋转木马事件都是由旋转木马本身触发（比如：在 `<div class="carousel">` 里面）。
+All carousel events are fired at the carousel itself (i.e. at the `<div class="carousel">`).
 
 <div class="table-responsive">
   <table class="table table-bordered table-striped">
