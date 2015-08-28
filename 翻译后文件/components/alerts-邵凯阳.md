@@ -1,6 +1,6 @@
 <table>
 <tbody>
-<tr><td><em>类别</em></td><td><em>标题</em></td><td><em>群组</em></td></tr>
+<tr><td>类别</td><td>标题</td><td>群组</td></tr>
 <tr><td>说明文档</td><td>警报</td><td>组件</td></tr>
 </tbody>
 </table>
